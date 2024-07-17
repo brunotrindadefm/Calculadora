@@ -5,14 +5,14 @@ function App() {
 
   const [resultado, setResultado] = useState("")
 
-  function acao (e) {
+  function acao(e) {
     // Será adicionado o valor do botão que foi clicado na variável resultado
     // e de event. O evento nesse caso é o click
     setResultado(resultado + e.target.innerText)
   }
 
-  function calcular () {
-    // Try-Catch necessário 
+  function calcular() {
+    // Try-Catch necessário porque o método eval() não é tão confiável
     try {
       // Método eval() para realizar contas matemáticas 
       // Método String() para transformar em String
@@ -22,7 +22,7 @@ function App() {
     }
   }
 
-  function resetar () {
+  function resetar() {
     // Transforma a variável setResultado em uma String vazia
     setResultado("");
   }
@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <section id="calculadora" className='container'>
-        <input type="text" value={resultado} id='resultado' readOnly/>
+        <input type="text" value={resultado} id='resultado' readOnly />
         <div id="botoes">
           <button onClick={acao}>7</button>
           <button onClick={acao}>8</button>
