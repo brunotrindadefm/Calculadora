@@ -1,4 +1,4 @@
-import './index.css'
+import './index.scss'
 import Calculadora from './Calculadora/Calculadora'
 
 function App() {
